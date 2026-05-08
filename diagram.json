@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "author": "Emmanuel",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-pi-pico-w", "id": "pico", "top": 0, "left": 0, "attrs": {} },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": 102,
+      "left": -101.8,
+      "attrs": { "color": "blue" }
+    }
+  ],
+  "connections": [
+    [ "pico:GP0", "$serialMonitor:RX", "", [] ],
+    [ "pico:GP1", "$serialMonitor:TX", "", [] ],
+    [ "pico:GND.4", "led1:C", "black", [ "h0" ] ],
+    [ "led1:A", "pico:GP12", "green", [ "v0" ] ]
+  ],
+  "dependencies": {}
+}
